@@ -11,13 +11,11 @@ export const dict = {
       donate: "Donar",
       contact: "Contacto",
     },
-hero: {
-  title: "Dona futuro\nDona\nsueños",
-  subtitle: "",
-  cta: "¡DONA!",
-},
-
-
+    hero: {
+      title: "Dona futuro\nDona\nsueños",
+      subtitle: "",
+      cta: "¡DONA!",
+    },
     quickImpact: {
       kits: "BECAS",
       talleres: "KITS ESCOLARES",
@@ -46,24 +44,32 @@ hero: {
     programsTitle: "Nuestros Programas",
     programs: [
       {
+        id: "art",
         title: "Materiales de arte",
         desc: "Kits con colores, cuadernos y pinceles.",
         imgAlt: "Niños con kits de arte",
+        img: "/p2.png",
       },
       {
+        id: "scholarships",
         title: "Becas y premios",
         desc: "Apoyo económico para continuar estudios.",
         imgAlt: "Niños recibiendo becas",
+        img: "/p2.png",
       },
       {
+        id: "workshops",
         title: "Clases y talleres",
         desc: "Arte, música, escritura y deportes.",
         imgAlt: "Taller de arte",
+        img: "/p2.png",
       },
       {
+        id: "wellbeing",
         title: "Bienestar emocional",
         desc: "Actividades para autoestima y resiliencia.",
         imgAlt: "Actividades de bienestar",
+        img: "/p2.png",
       },
     ],
     donateBlock: {
@@ -125,24 +131,32 @@ hero: {
     programsTitle: "Our Programs",
     programs: [
       {
+        id: "art",
         title: "Art materials",
         desc: "Kits with crayons, notebooks and brushes.",
         imgAlt: "Kids with art kits",
+        img: "/p2.png",
       },
       {
+        id: "scholarships",
         title: "Scholarships & awards",
         desc: "Financial support to stay in school.",
         imgAlt: "Children receiving scholarships",
+        img: "/p2.png",
       },
       {
+        id: "workshops",
         title: "Classes & workshops",
         desc: "Art, music, writing and sports.",
         imgAlt: "Art workshop",
+        img: "/p2.png",
       },
       {
+        id: "wellbeing",
         title: "Emotional wellbeing",
         desc: "Activities to boost self-esteem and resilience.",
         imgAlt: "Wellbeing activities",
+        img: "/p2.png",
       },
     ],
     donateBlock: {

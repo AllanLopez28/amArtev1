@@ -1,33 +1,35 @@
-
 import Image from "next/image";
 import { t, type Lang } from "@/lib/strings";
-import { Card } from "@/components/ui/card";
+import ProgramsCarousel from "@/components/ProgramsCarousel";
 
-export default async function Programs(
+export default async function ProgramsPage(
   { params }: { params: Promise<{ lang: Lang }> }
 ) {
   const { lang } = await params;
   const dict = t(lang || "es");
 
-  return (
-    <div className="container-responsive py-10">
-      <h1 className="text-3xl font-bold">{dict.programsTitle}</h1>
+  // Mostrar TODOS los programas en el carrusel
+const allPrograms = [...dict.programs] as {
+  id: string; title: string; desc: string; img: string; imgAlt: string;
+}[];
 
-      <div className="grid md:grid-cols-4 gap-4 mt-6">
-        {dict.programs.map((p: any, i: number) => (
-          <Card key={i}>
-            <Image
-              src="/escuela11.png"
-              alt={p.imgAlt}
-              width={400}
-              height={280}
-              className="w-full h-40 object-cover rounded-xl"
-            />
-            <h3 className="mt-3 font-semibold">{p.title}</h3>
-            <p className="text-sm opacity-80">{p.desc}</p>
-          </Card>
-        ))}
+
+  return (
+    <section
+      className="py-12 min-h-[70vh] bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/back3.png')" }}
+    >
+      <div className="container-responsive text-white">
+        <h1 className="text-3xl md:text-4xl font-bold">
+          {dict.programsTitle}
+        </h1>
+
+        {/* Carrusel reutilizado mostrando TODOS los programas */}
+        <ProgramsCarousel items={allPrograms} />
+
+        {/* Espacio para futuras acciones (CTA, filtros, etc.) */}
+        <div className="mt-10" />
       </div>
-    </div>
+    </section>
   );
 }
