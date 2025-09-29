@@ -6,10 +6,13 @@ import { t, type Lang } from "@/lib/strings";
 import ProgramsCarousel from "@/components/ProgramsCarousel";
 
 export default async function Home(
-  { params }: { params: Promise<{ lang: Lang }> } // ← params asíncrono
+  { params }: { params: Promise<{ lang: Lang }> }
 ) {
-  const { lang } = await params;                    // ← espera params
-  const dict = t(lang || "es");
+  const { lang } = await params;
+
+  // ✅ Normaliza el idioma antes de usar t(...)
+  const safeLang: Lang = (lang === "en" || lang === "es") ? lang : "es";
+  const dict = t(safeLang);
 
   // IDs de los programas que quieres en portada
   const featuredPrograms = ["art", "workshops", "scholarships"];
@@ -54,7 +57,7 @@ export default async function Home(
                 <span className="text-xs md:text-sm opacity-80">{dict.quickImpact.fondos}</span>
               </div>
               <div className="flex md:justify-end">
-                <Link href={`/${lang}/donate`} className="w-full md:w-auto">
+                <Link href={`/${safeLang}/donate`} className="w-full md:w-auto">
                   <Button className="w-full text-sm md:text-base">
                     {dict.hero.cta}
                   </Button>
@@ -90,11 +93,11 @@ export default async function Home(
         <div className="container-responsive text-white">
           <h2 className="text-5xl md:text-5xl font-bold">{dict.programsTitle}</h2>
 
-          {/* Carrusel con flechas (Client Component) */}
+          {/* Carrusel con flechas */}
           <ProgramsCarousel items={featuredItems} />
 
           <div className="mt-6">
-            <Link href={`/${lang}/programs`} className="underline">
+            <Link href={`/${safeLang}/programs`} className="underline">
               Ver todos / See all →
             </Link>
           </div>
@@ -107,7 +110,7 @@ export default async function Home(
           <h3 className="text-2xl font-bold">{dict.donateBlock.title}</h3>
           <p className="mt-2 opacity-80">{dict.donateBlock.body}</p>
           <div className="mt-4 flex gap-2">
-            <Link href={`/${lang}/donate`}>
+            <Link href={`/${safeLang}/donate`}>
               <Button>{dict.hero.cta}</Button>
             </Link>
             <Link
