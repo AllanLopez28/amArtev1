@@ -85,6 +85,18 @@ export const dict = {
     footer: {
       rights: "© AMARTE. Todos los derechos reservados.",
     },
+    whatWeDoTitle: "¿Qué hacemos?",
+    whatWeDo: {
+      bullets: [
+        "Entrega de kits escolares",
+        "Programas educativos y artísticos que fomentan la creatividad, el pensamiento crítico y el amor por el aprendizaje.",
+        "Actividades recreativas y culturales",
+        "Becas de estudio para dar continuidad al proceso educativo de quienes más lo necesitan."
+      ],
+      summary:
+        "Cada acción que realizamos busca abrir oportunidades, sembrar sueños y construir un futuro lleno de posibilidades.",
+      statsAlt: "Cifras de impacto de AMARTE"
+    }
   },
 
   en: {
@@ -172,6 +184,18 @@ export const dict = {
     footer: {
       rights: "© AMARTE. All rights reserved.",
     },
+    whatWeDoTitle: "What we do",
+    whatWeDo: {
+      bullets: [
+        "Delivery of school kits",
+        "Educational and artistic programs that foster creativity, critical thinking, and a love for learning.",
+        "Recreational and cultural activities",
+        "Scholarships to ensure continuity of education for those who need it most."
+      ],
+      summary:
+        "Each action we take seeks to open opportunities, sow dreams, and build a future full of possibilities.",
+      statsAlt: "AMARTE impact figures"
+    }
   },
 } as const;
 

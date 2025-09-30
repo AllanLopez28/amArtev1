@@ -85,6 +85,44 @@ export default async function Home(
         </div>
       </section>
 
+      {/* ¿Qué hacemos? */}
+      <section className="container-responsive my-16 grid md:grid-cols-2 gap-10 items-start">
+        {/* Texto (izquierda) */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-amBlue">
+            {dict.whatWeDoTitle}
+          </h2>
+
+          <ul className="mt-6 space-y-5 text-base md:text-lg">
+            {dict.whatWeDo.bullets.map((line: string, i: number) => (
+              <li key={i} className="pl-6 relative leading-relaxed">
+                <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-current" />
+                {line}
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-6 text-base md:text-lg font-semibold leading-relaxed">
+            {dict.whatWeDo.summary}
+          </p>
+        </div>
+
+        {/* Imagen de datos (derecha) */}
+        <div className="w-full flex justify-center">
+          <div className="rounded-2xl shadow-soft overflow-hidden max-w-[80%]">
+            <Image
+              src="/datos.png"
+              alt={dict.whatWeDo.statsAlt}
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+              priority={false}
+            />
+          </div>
+        </div>
+      </section>
+
+
       {/* PROGRAMAS */}
       <section
         className="py-12 bg-cover bg-center"

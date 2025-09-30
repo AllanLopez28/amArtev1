@@ -26,7 +26,7 @@ export default async function About(
 
       {/* Contenido */}
       <div className="container-responsive py-16 relative">
-        <h1 className="text-3xl font-bold">{dict.teamTitle}</h1>
+        <h1 className="text-5xl font-bold">{dict.teamTitle}</h1>
         <p className="mt-3 max-w-2xl opacity-80">
           Misión, visión e historia. Texto de ejemplo acorde a la fundación,
           resaltando transparencia, arte y educación.
@@ -43,8 +43,8 @@ export default async function About(
                 height={400}
                 className="object-contain"
               />
-              <h3 className="mt-6 text-4xl font-semibold text-amWhite">{member.name}</h3>
-              <p className="text-4xl text-amWhite">{member.role}</p>
+              <h3 className="mt-6 text-3xl font-semibold text-amWhite">{member.name}</h3>
+              <p className="text-2xl text-amWhite">{member.role}</p>
 
             </div>
           ))}
