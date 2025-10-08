@@ -10,7 +10,7 @@ export default async function Home(
 ) {
   const { lang } = await params;
 
-  // ✅ Normaliza el idioma antes de usar t(...)
+  // idioma predeterminado español 
   const safeLang: Lang = (lang === "en" || lang === "es") ? lang : "es";
   const dict = t(safeLang);
 

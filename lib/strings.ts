@@ -62,7 +62,7 @@ export const dict = {
         title: "Clases y talleres",
         desc: "Arte, música, escritura y deportes.",
         imgAlt: "Taller de arte",
-        img: "/p2.png",
+        img: "/p1.png",
       },
       {
         id: "wellbeing",
@@ -116,9 +116,9 @@ export const dict = {
       cta: "Donate now",
     },
     quickImpact: {
-      kits: "Art kits delivered",
-      talleres: "Children in workshops",
-      fondos: "Funds raised",
+      kits: "SCOLARSHIPS",
+      talleres: "SCHOOL KITS",
+      fondos: "COMMUNITIES",
     },
     featuresTitle:
       "You can make a difference by supporting a cause you care about. Your donation can change lives.",
