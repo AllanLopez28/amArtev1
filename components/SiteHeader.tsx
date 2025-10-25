@@ -62,10 +62,19 @@ export default function SiteHeader({
             <Link href={`/${lang}/get-involved`}>{dict.nav.getInvolved}</Link>
             <Link href={`/${lang}/contact`}>{dict.nav.contact}</Link>
 
+            {/* Botón de donar (CTA) desktop */}
+            <Link
+              href={`/${lang}/donate`}
+              className="ml-4 px-3 py-1 bg-amPink text-white rounded-md text-sm hover:opacity-90"
+              aria-label={dict.nav.donate}
+            >
+              {dict.nav.donate}
+            </Link>
+
             {/* Botón de idioma */}
             <Link
               href={`/${otherLang}`}
-              className="ml-4 px-3 py-1 border rounded-md text-sm hover:bg-neutral-100"
+              className="ml-2 px-3 py-1 border rounded-md text-sm hover:bg-neutral-100"
             >
               {otherLang.toUpperCase()}
             </Link>
@@ -146,11 +155,21 @@ export default function SiteHeader({
                 {dict.nav.contact}
               </Link>
 
+              {/* Botón de donar en mobile */}
+              <Link
+                href={`/${lang}/donate`}
+                onClick={() => setOpen(false)}
+                className="mt-4 px-3 py-2 bg-amPink text-white rounded-md text-center hover:opacity-90"
+                aria-label={dict.nav.donate}
+              >
+                {dict.nav.donate}
+              </Link>
+
               {/* Botón de idioma en mobile */}
               <Link
                 href={`/${otherLang}`}
                 onClick={() => setOpen(false)}
-                className="mt-4 px-3 py-2 border rounded-md text-center hover:bg-neutral-100"
+                className="mt-2 px-3 py-2 border rounded-md text-center hover:bg-neutral-100"
               >
                 {otherLang.toUpperCase()}
               </Link>

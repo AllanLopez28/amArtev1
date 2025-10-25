@@ -12,7 +12,8 @@ export const dict = {
       contact: "Contacto",
     },
     hero: {
-      title: "Dona futuro\nDona\nsueños",
+      //Where the Love and Art Come Together
+      title: "Where the Love\nand Art\nCome Together",
       subtitle: "",
       cta: "¡DONA!",
     },

@@ -68,8 +68,30 @@ export default async function Home(
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className="relative bg-[url('/back1.png')] bg-cover bg-center bg-no-repeat">
+
+    {/* PROGRAMAS */}
+      <section
+        className="py-12 bg-cover bg-center"
+        style={{ backgroundImage: "url('/back1.png')" }}
+      >
+        <div className="container-responsive text-black">
+          <h2 className="text-5xl md:text-5xl font-bold">{dict.programsTitle}</h2>
+
+          {/* Carrusel con flechas */}
+          <ProgramsCarousel items={featuredItems} />
+
+          <div className="mt-6">
+            <Link href={`/${safeLang}/programs`} className="underline">
+              Ver todos / See all →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* FEATURES 
+      
+            <section className="relative bg-[url('/back1.png')] bg-cover bg-center bg-no-repeat">
         <div className="relative container-responsive py-14 md:py-16">
           <h2 className="text-center text-2xl md:text-3xl font-bold max-w-3xl mx-auto">
             {dict.featuresTitle}
@@ -84,6 +106,8 @@ export default async function Home(
           </div>
         </div>
       </section>
+      */}
+
 
       {/* ¿Qué hacemos? */}
       <section className="container-responsive my-16 grid md:grid-cols-2 gap-10 items-start">
@@ -123,24 +147,7 @@ export default async function Home(
       </section>
 
 
-      {/* PROGRAMAS */}
-      <section
-        className="py-12 bg-cover bg-center"
-        style={{ backgroundImage: "url('/back3.png')" }}
-      >
-        <div className="container-responsive text-white">
-          <h2 className="text-5xl md:text-5xl font-bold">{dict.programsTitle}</h2>
-
-          {/* Carrusel con flechas */}
-          <ProgramsCarousel items={featuredItems} />
-
-          <div className="mt-6">
-            <Link href={`/${safeLang}/programs`} className="underline">
-              Ver todos / See all →
-            </Link>
-          </div>
-        </div>
-      </section>
+      
 
       {/* DONAR */}
       <section className="container-responsive my-16 grid md:grid-cols-2 gap-8 items-center">
@@ -168,6 +175,8 @@ export default async function Home(
           className="rounded-2xl w-full h-72 object-cover"
         />
       </section>
+
+      
     </div>
   );
 }
