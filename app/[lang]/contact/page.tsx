@@ -20,15 +20,6 @@ export default async function Contact(
         <Button>Enviar</Button>
       </form>
 
-      <div className="max-w-lg card mt-6">
-        <h3 className="font-semibold mb-2">Transparencia</h3>
-        <p className="text-sm opacity-80">
-          80% programas · 15% administración · 5% otros (ejemplo).
-        </p>
-        <a className="underline mt-2 inline-block" href="#">
-          Descargar reporte anual (PDF)
-        </a>
-      </div>
     </div>
   );
 }

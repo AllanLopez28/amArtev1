@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { t, type Lang } from "@/lib/strings";
 import ProgramsCarousel from "@/components/ProgramsCarousel";
+import StoriesCarousel, { type Story } from "@/components/StoriesCarousel";
 
 export default async function Home(
   { params }: { params: Promise<{ lang: Lang }> }
@@ -19,6 +20,14 @@ export default async function Home(
   const featuredItems = dict.programs.filter((p: any) =>
     featuredPrograms.includes(p.id)
   );
+
+  // ✅ CONSTRUIR stories desde dict.histories (corrige el nombre y el tipo)
+  const stories: Story[] = (dict.histories || []).map(h => ({
+    id: h.id,
+    title: h.title,
+    desc: h.desc,
+    img: h.img, // opcional
+  }));
 
   return (
     <div>
@@ -68,47 +77,6 @@ export default async function Home(
         </div>
       </section>
 
-
-    {/* PROGRAMAS */}
-      <section
-        className="py-12 bg-cover bg-center"
-        style={{ backgroundImage: "url('/back1.png')" }}
-      >
-        <div className="container-responsive text-black">
-          <h2 className="text-5xl md:text-5xl font-bold">{dict.programsTitle}</h2>
-
-          {/* Carrusel con flechas */}
-          <ProgramsCarousel items={featuredItems} />
-
-          <div className="mt-6">
-            <Link href={`/${safeLang}/programs`} className="underline">
-              Ver todos / See all →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-
-      {/* FEATURES 
-      
-            <section className="relative bg-[url('/back1.png')] bg-cover bg-center bg-no-repeat">
-        <div className="relative container-responsive py-14 md:py-16">
-          <h2 className="text-center text-2xl md:text-3xl font-bold max-w-3xl mx-auto">
-            {dict.featuresTitle}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
-            {dict.features.map((f: any, i: number) => (
-              <Card key={i}>
-                <h3 className="font-semibold text-lg">{f.title}</h3>
-                <p className="mt-1 text-sm opacity-80">{f.desc}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
-
-
       {/* ¿Qué hacemos? */}
       <section className="container-responsive my-16 grid md:grid-cols-2 gap-10 items-start">
         {/* Texto (izquierda) */}
@@ -146,8 +114,41 @@ export default async function Home(
         </div>
       </section>
 
+      {/* PROGRAMAS */}
+      <section
+        className="py-12 bg-cover bg-center"
+        style={{ backgroundImage: "url('/back1.png')" }}
+      >
+        <div className="container-responsive text-black">
+          <h2 className="text-5xl md:text-5xl font-bold">{dict.programsTitle}</h2>
 
-      
+          {/* Carrusel con flechas */}
+          <ProgramsCarousel items={featuredItems} />
+
+          <div className="mt-6">
+            <Link href={`/${safeLang}/programs`} className="underline">
+              Ver todos / See all →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ✅ HISTORIAS (carrusel automático 2 en 2) */}
+      <section
+        className="py-12 bg-cover bg-center"
+        style={{ backgroundImage: "url('/form.png')" }}
+      >
+        {/* Overlay opcional para legibilidad del texto */}
+        <div className="rounded-2xl p-6 backdrop-blur-sm md:p-10 shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center md:text-left">
+            {dict.testimonyTitle}
+          </h2>
+
+          <StoriesCarousel items={stories} intervalMs={5000} />
+        </div>
+      </section>
+
+
 
       {/* DONAR */}
       <section className="container-responsive my-16 grid md:grid-cols-2 gap-8 items-center">
@@ -175,8 +176,6 @@ export default async function Home(
           className="rounded-2xl w-full h-72 object-cover"
         />
       </section>
-
-      
     </div>
   );
 }

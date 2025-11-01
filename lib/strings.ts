@@ -10,9 +10,9 @@ export const dict = {
       getInvolved: "Involúcrate",
       donate: "Donar",
       contact: "Contacto",
+      faq: "FAQ",
     },
     hero: {
-      //Where the Love and Art Come Together
       title: "Where the Love\nand Art\nCome Together",
       subtitle: "",
       cta: "¡DONA!",
@@ -22,6 +22,7 @@ export const dict = {
       talleres: "KITS ESCOLARES",
       fondos: "COMUNIDADES",
     },
+
     featuresTitle:
       "Puedes marcar la diferencia apoyando una causa que te importa. Tu donación puede cambiar vidas.",
     features: [
@@ -42,6 +43,7 @@ export const dict = {
         desc: "Con arte y educación, abrimos caminos de oportunidad.",
       },
     ],
+
     programsTitle: "Nuestros Programas",
     programs: [
       {
@@ -73,6 +75,35 @@ export const dict = {
         img: "/p2.png",
       },
     ],
+
+    testimonyTitle: "Historias",
+    histories: [
+      {
+        id: "beca",
+        title: "Beneficiaria de beca escolar",
+        desc: "Beca completa para estudios superiores.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "taller",
+        title: "Participante de taller de arte",
+        desc: "Taller creativo para niños en situación de vulnerabilidad.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "apoyo",
+        title: "Apoyo a la continuidad educativa",
+        desc: "Acompañamiento y materiales para no abandonar la escuela.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "musica",
+        title: "Música para crecer",
+        desc: "El coro infantil fortalece autoestima y disciplina.",
+        img: "/escuela13.jpg",
+      },
+    ],
+
     donateBlock: {
       title: "Hacer una donación",
       body: "Tu generosidad financia materiales, talleres y becas.",
@@ -92,12 +123,31 @@ export const dict = {
         "Entrega de kits escolares",
         "Programas educativos y artísticos que fomentan la creatividad, el pensamiento crítico y el amor por el aprendizaje.",
         "Actividades recreativas y culturales",
-        "Becas de estudio para dar continuidad al proceso educativo de quienes más lo necesitan."
+        "Becas de estudio para dar continuidad al proceso educativo de quienes más lo necesitan.",
       ],
       summary:
         "Cada acción que realizamos busca abrir oportunidades, sembrar sueños y construir un futuro lleno de posibilidades.",
-      statsAlt: "Cifras de impacto de AMARTE"
-    }
+      statsAlt: "Cifras de impacto de AMARTE",
+    },
+    faq: {
+      title: "Preguntas frecuentes",
+      intro:
+        "Aquí encontrarás respuestas a dudas comunes. Iremos ampliando esta sección.",
+      items: [
+        {
+          q: "¿Cómo puedo hacer una donación?",
+          a: "Puedes donar en la sección Donar. Aceptamos pagos con Stripe (tarjeta y otros métodos).",
+        },
+        {
+          q: "¿Puedo ser voluntario?",
+          a: "Sí. En la sección Involúcrate encontrarás un formulario para postularte como voluntario.",
+        },
+        {
+          q: "¿Recibiré comprobante de donación?",
+          a: "Sí, una vez completado el pago recibirás el comprobante por correo.",
+        },
+      ],
+    },
   },
 
   en: {
@@ -109,6 +159,7 @@ export const dict = {
       getInvolved: "Get Involved",
       donate: "Donate",
       contact: "Contact",
+      faq: "FAQ",
     },
     hero: {
       title: "Your donation keeps a child in school.",
@@ -117,7 +168,7 @@ export const dict = {
       cta: "Donate now",
     },
     quickImpact: {
-      kits: "SCOLARSHIPS",
+      kits: "SCHOLARSHIPS",
       talleres: "SCHOOL KITS",
       fondos: "COMMUNITIES",
     },
@@ -141,6 +192,7 @@ export const dict = {
         desc: "Through art and education, we open opportunities.",
       },
     ],
+
     programsTitle: "Our Programs",
     programs: [
       {
@@ -172,6 +224,35 @@ export const dict = {
         img: "/p2.png",
       },
     ],
+
+    testimonyTitle: "Stories",
+    histories: [
+      {
+        id: "scholar",
+        title: "Scholarship recipient",
+        desc: "Full scholarship to continue higher education.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "artworkshop",
+        title: "Art workshop participant",
+        desc: "Creative workshop for children in vulnerable situations.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "continuity",
+        title: "Learning continuity support",
+        desc: "Mentoring and supplies to prevent school dropout.",
+        img: "/escuela13.jpg",
+      },
+      {
+        id: "music",
+        title: "Music to grow",
+        desc: "The children’s choir builds discipline and self-esteem.",
+        img: "/escuela13.jpg",
+      },
+    ],
+
     donateBlock: {
       title: "Make a donation",
       body: "Your generosity funds materials, workshops and scholarships.",
@@ -191,12 +272,31 @@ export const dict = {
         "Delivery of school kits",
         "Educational and artistic programs that foster creativity, critical thinking, and a love for learning.",
         "Recreational and cultural activities",
-        "Scholarships to ensure continuity of education for those who need it most."
+        "Scholarships to ensure continuity of education for those who need it most.",
       ],
       summary:
         "Each action we take seeks to open opportunities, sow dreams, and build a future full of possibilities.",
-      statsAlt: "AMARTE impact figures"
-    }
+      statsAlt: "AMARTE impact figures",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      intro:
+        "Here you’ll find answers to common questions. We will expand this section.",
+      items: [
+        {
+          q: "How can I make a donation?",
+          a: "You can donate in the Donate section. We accept Stripe (cards and other methods).",
+        },
+        {
+          q: "Can I volunteer?",
+          a: "Yes. In the Get Involved section you’ll find a volunteer application form.",
+        },
+        {
+          q: "Will I receive a donation receipt?",
+          a: "Yes, once the payment is completed you’ll receive a receipt via email.",
+        },
+      ],
+    },
   },
 } as const;
 

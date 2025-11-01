@@ -13,6 +13,7 @@ type Dict = {
     getInvolved: string;
     contact: string;
     donate: string;
+    faq: string;
   };
   footer: { rights: string };
 };
@@ -58,8 +59,9 @@ export default function SiteHeader({
             <Link href={`/${lang}`}>{dict.nav.home}</Link>
             <Link href={`/${lang}/about`}>{dict.nav.about}</Link>
             <Link href={`/${lang}/programs`}>{dict.nav.programs}</Link>
-            <Link href={`/${lang}/impact`}>{dict.nav.impact}</Link>
+            {/* <Link href={`/${lang}/impact`}>{dict.nav.impact}</Link> */}
             <Link href={`/${lang}/get-involved`}>{dict.nav.getInvolved}</Link>
+            <Link href={`/${lang}/faq`}>{dict.nav.faq}</Link>
             <Link href={`/${lang}/contact`}>{dict.nav.contact}</Link>
 
             {/* Botón de donar (CTA) desktop */}
