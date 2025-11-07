@@ -8,10 +8,9 @@ export default async function LangLayout(
 ) {
   const { lang } = await params;
 
-  // Normaliza el idioma para evitar dict undefined
+  // Normaliza idioma
   const safeLang: Lang = (lang === "en" || lang === "es") ? lang : "es";
   const dict = t(safeLang);
-  const other = (safeLang === "es" ? "en" : "es") as Lang;
 
   return (
     <>
@@ -21,19 +20,19 @@ export default async function LangLayout(
       <div className="h-16 md:h-[72px]" />
       <main>{children}</main>
 
-      {/* FOOTER */}
-      <footer className="mt-16 border-t bg-white">
+      {/* FOOTER OSCURO */}
+      <footer className="mt-16 border-t border-neutral-800 bg-black text-white">
         <div className="container-responsive py-10 grid gap-10 md:grid-cols-3">
-          {/* Col 1: Logo mini + mensaje institucional */}
+          {/* Col 1: Logo + mensaje institucional */}
           <div>
             <Image
               src="/logo-amarte.png"
               alt="AMARTE"
               width={100}
               height={32}
-              className="h-auto w-[100px]"
+              className="h-auto w-[100px] invert brightness-200"
             />
-            <p className="mt-3 text-sm leading-relaxed max-w-md">
+            <p className="mt-3 text-sm leading-relaxed max-w-md text-neutral-300">
               AMARTE International Inc. is a 501(c)(3) not-for-profit organization,
               incorporated in the State of New York on May 23, 2025. Our purpose is
               to promote the rights and well-being of underserved children and their
@@ -43,37 +42,27 @@ export default async function LangLayout(
 
           {/* Col 2: Menú resumido */}
           <div>
-            <h4 className="font-semibold mb-3">Links</h4>
+            <h4 className="font-semibold mb-3 text-white">Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href={`/${safeLang}/about`} className="hover:underline">{dict.nav.about}</Link></li>
-              <li><Link href={`/${safeLang}/programs`} className="hover:underline">{dict.nav.programs}</Link></li>
-              <li><Link href={`/${safeLang}/donate`} className="hover:underline">{dict.nav.donate}</Link></li>
-              <li><Link href={`/${safeLang}/get-involved`} className="hover:underline">{dict.nav.getInvolved}</Link></li>
-              <li><Link href={`/${safeLang}/contact`} className="hover:underline">{dict.nav.contact}</Link></li>
-              <li><Link href={`/${safeLang}/faq`} className="hover:underline">{dict.nav.faq}</Link></li>
-            
-
-
-              {/* TODO: Agregar dirección cuando la tengas */}
-              {/* <li className="text-xs opacity-70">123 Example St, City, State</li> */}
-              {/* TODO: Aviso legal / Privacidad / Cookies */}
-              {/* <li><Link href={`/${safeLang}/legal`} className="hover:underline">Aviso legal</Link></li>
-              <li><Link href={`/${safeLang}/privacy`} className="hover:underline">Privacidad</Link></li>
-              <li><Link href={`/${safeLang}/cookies`} className="hover:underline">Cookies</Link></li> */}
+              <li><Link href={`/${safeLang}/about`} className="hover:text-pink-400 transition">{dict.nav.about}</Link></li>
+              <li><Link href={`/${safeLang}/programs`} className="hover:text-pink-400 transition">{dict.nav.programs}</Link></li>
+              <li><Link href={`/${safeLang}/donate`} className="hover:text-pink-400 transition">{dict.nav.donate}</Link></li>
+              <li><Link href={`/${safeLang}/get-involved`} className="hover:text-pink-400 transition">{dict.nav.getInvolved}</Link></li>
+              <li><Link href={`/${safeLang}/contact`} className="hover:text-pink-400 transition">{dict.nav.contact}</Link></li>
+              <li><Link href={`/${safeLang}/faq`} className="hover:text-pink-400 transition">{dict.nav.faq}</Link></li>
             </ul>
           </div>
 
           {/* Col 3: Contacto + redes */}
           <div>
-            <h4 className="font-semibold mb-3">{dict.nav.contact}</h4>
-            <p className="text-sm">
-              <a href="mailto:amarteproject@gmail.com" className="hover:underline">
+            <h4 className="font-semibold mb-3 text-white">{dict.nav.contact}</h4>
+            <p className="text-sm text-neutral-300">
+              <a href="mailto:amarteproject@gmail.com" className="hover:text-pink-400 transition">
                 amarteproject@gmail.com
               </a>
             </p>
-            {/* Tel opcional si aplica */}
-            {/* <p className="text-sm mt-1">+1 (555) 000-0000</p> */}
 
+            {/* Redes sociales */}
             <div className="mt-4 flex items-center gap-3">
               {/* Facebook */}
               <a
@@ -81,7 +70,7 @@ export default async function LangLayout(
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border hover:bg-neutral-50"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-600 text-white hover:bg-pink-500 transition"
                 title="Facebook"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -90,22 +79,20 @@ export default async function LangLayout(
               </a>
               {/* Instagram */}
               <a
-                href="#" //poner link real despues
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border hover:bg-neutral-50"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-neutral-600 text-white hover:bg-pink-500 transition"
                 title="Instagram"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 16.8 2.8 2.8 0 0 0 12 9.2zM17.8 6.2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
               </a>
-
-
             </div>
 
-            <p className="text-xs mt-6 opacity-70">
+            <p className="text-xs mt-6 opacity-70 text-neutral-400">
               {dict.footer.rights}
             </p>
           </div>
