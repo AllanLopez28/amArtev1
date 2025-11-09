@@ -51,7 +51,7 @@ export const dict = {
         title: "Materiales de arte",
         desc: "Kits con colores, cuadernos y pinceles.",
         imgAlt: "Niños con kits de arte",
-        img: "/p2.png",
+        img: "/p3.png",
       },
       {
         id: "scholarships",
@@ -80,28 +80,41 @@ export const dict = {
     histories: [
       {
         id: "beca",
-        title: "Beneficiaria de beca escolar",
-        desc: "Beca completa para estudios superiores.",
-        img: "/escuela13.jpg",
+        title: "María – Beca para continuar sus estudios",
+        desc: "María soñaba con ser maestra, pero su familia no podía cubrir los gastos de su educación. Gracias a una beca de Amarte, pudo continuar sus estudios y hoy cursa su tercer año de docencia. 'Este apoyo me devolvió la esperanza', nos cuenta con una sonrisa.",
+        img: "/s1.JPG",
       },
       {
         id: "taller",
-        title: "Participante de taller de arte",
-        desc: "Taller creativo para niños en situación de vulnerabilidad.",
-        img: "/escuela13.jpg",
+        title: "Carlos – Descubrió su talento en el arte",
+        desc: "Carlos, de 10 años, participó en uno de nuestros talleres de arte en su comunidad. Allí descubrió su pasión por la pintura y aprendió a expresar sus emociones a través del color. 'Nunca había tenido mis propios pinceles. Ahora pinto todos los días', dice orgulloso.",
+        img: "/s2.JPG",
       },
       {
         id: "apoyo",
-        title: "Apoyo a la continuidad educativa",
-        desc: "Acompañamiento y materiales para no abandonar la escuela.",
-        img: "/escuela13.jpg",
+        title: "Ana – No dejó la escuela gracias al acompañamiento",
+        desc: "Ana estaba a punto de abandonar sus clases por falta de recursos. Nuestro programa de continuidad educativa le brindó materiales y apoyo emocional. Hoy sigue estudiando y quiere ser enfermera para ayudar a otros como la ayudaron a ella.",
+        img: "/s5.JPG",
       },
       {
         id: "musica",
-        title: "Música para crecer",
-        desc: "El coro infantil fortalece autoestima y disciplina.",
-        img: "/escuela13.jpg",
+        title: "El coro de Santa Ana – La música que une corazones",
+        desc: "Niños y niñas del coro de Santa Ana ensayan cada semana con entusiasmo. La música ha fortalecido su disciplina, confianza y trabajo en equipo. 'Aquí aprendí que todos tenemos una voz que vale', dice Sofía, una de las integrantes más jóvenes.",
+        img: "/s4.jpg",
       },
+      {
+        id: "comunidad",
+        title: "Rosa – Unidos por su comunidad",
+        desc: "Rosa vive en una zona rural donde los niños caminaban largos trayectos para llegar a la escuela. Con el apoyo de Amarte, organizaron jornadas comunitarias para mejorar el acceso y crear un espacio seguro para estudiar. 'No solo ayudaron a mis hijos, ayudaron a todo el caserío', comparte emocionada.",
+        img: "/s3.JPG",
+      },
+      {
+        id: "voluntario",
+        title: "Diego – De beneficiario a voluntario",
+        desc: "Diego conoció Amarte cuando era estudiante y recibió un kit escolar que lo motivó a continuar. Años después, se unió como voluntario para entregar materiales a otros niños. 'Ahora me toca devolver lo que una vez recibí', dice mientras acomoda cajas llenas de colores y sonrisas.",
+        img: "/escuela1.png",
+      },
+
     ],
 
     donateBlock: {
@@ -162,9 +175,9 @@ export const dict = {
       faq: "FAQ",
     },
     hero: {
-      title: "Your donation keeps a child in school.",
+      title: "Where the Love\nand Art\nCome Together",
       subtitle:
-        "With your help, more children in El Salvador keep learning and creating.",
+        "",
       cta: "Donate now",
     },
     quickImpact: {
@@ -228,28 +241,40 @@ export const dict = {
     testimonyTitle: "Stories",
     histories: [
       {
-        id: "scholar",
-        title: "Scholarship recipient",
-        desc: "Full scholarship to continue higher education.",
-        img: "/escuela13.jpg",
+        id: "beca",
+        title: "María – Scholarship to continue her studies",
+        desc: "María dreamed of becoming a teacher, but her family couldn’t afford the cost of her education. Thanks to an Amarte scholarship, she was able to continue her studies and is now in her third year of teaching school. 'This support gave me hope again,' she shares with a smile.",
+        img: "/s1.JPG",
       },
       {
-        id: "artworkshop",
-        title: "Art workshop participant",
-        desc: "Creative workshop for children in vulnerable situations.",
-        img: "/escuela13.jpg",
+        id: "taller",
+        title: "Carlos – Discovered his talent through art",
+        desc: "Carlos, age 10, took part in one of our community art workshops. There, he discovered his passion for painting and learned to express his emotions through color. 'I had never owned my own brushes before. Now I paint every day,' he says proudly.",
+        img: "/s2.JPG",
       },
       {
-        id: "continuity",
-        title: "Learning continuity support",
-        desc: "Mentoring and supplies to prevent school dropout.",
-        img: "/escuela13.jpg",
+        id: "apoyo",
+        title: "Ana – Stayed in school thanks to support",
+        desc: "Ana was about to leave school due to financial difficulties. Our educational continuity program provided her with supplies and emotional support. Today, she continues studying and dreams of becoming a nurse to help others just as she was helped.",
+        img: "/s5.JPG",
       },
       {
-        id: "music",
-        title: "Music to grow",
-        desc: "The children’s choir builds discipline and self-esteem.",
-        img: "/escuela13.jpg",
+        id: "musica",
+        title: "The Santa Ana Choir – Music that unites hearts",
+        desc: "The boys and girls of the Santa Ana Choir rehearse every week with enthusiasm. Music has strengthened their discipline, confidence, and teamwork. 'Here I learned that every voice matters,' says Sofía, one of the youngest members.",
+        img: "/s4.jpg",
+      },
+      {
+        id: "comunidad",
+        title: "Rosa – United for her community",
+        desc: "Rosa lives in a rural area where children used to walk long distances to get to school. With Amarte’s support, the community organized workdays to improve access and create a safe place to learn. 'They didn’t just help my children—they helped the whole village,' she says with emotion.",
+        img: "/s3.JPG",
+      },
+      {
+        id: "voluntario",
+        title: "Diego – From beneficiary to volunteer",
+        desc: "Diego first met Amarte as a student when he received a school kit that encouraged him to keep studying. Years later, he joined as a volunteer to deliver materials to other children. 'Now it’s my turn to give back what I once received,' he says while arranging boxes full of colors and smiles.",
+        img: "/escuela1.png",
       },
     ],
 

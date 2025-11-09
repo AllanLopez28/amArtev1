@@ -85,50 +85,50 @@ export default async function Home(
         </div>
       </section>
 
-{/* ¿Qué hacemos? */}
-<section className="w-full grid md:grid-cols-2 gap-0 items-stretch overflow-hidden">
-  {/* Texto (izquierda) */}
-  <div className="flex flex-col justify-start pt-24 px-10 pb-20 bg-white">
-    <h2 className="text-3xl md:text-4xl font-extrabold text-amBlue">
-      {dict.whatWeDoTitle}
-    </h2>
+      {/* ¿Qué hacemos? */}
+      <section className="w-full grid md:grid-cols-2 gap-0 items-stretch overflow-hidden">
+        {/* Texto (izquierda) */}
+        <div className="flex flex-col justify-start pt-24 px-10 pb-20 bg-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-amBlue">
+            {dict.whatWeDoTitle}
+          </h2>
 
-    <ul className="mt-6 space-y-5 text-base md:text-lg">
-      {dict.whatWeDo.bullets.map((line: string, i: number) => (
-        <li key={i} className="pl-6 relative leading-relaxed">
-          <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-current" />
-          {line}
-        </li>
-      ))}
-    </ul>
+          <ul className="mt-6 space-y-5 text-base md:text-lg">
+            {dict.whatWeDo.bullets.map((line: string, i: number) => (
+              <li key={i} className="pl-6 relative leading-relaxed">
+                <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-current" />
+                {line}
+              </li>
+            ))}
+          </ul>
 
-    <p className="mt-6 text-base md:text-lg font-semibold leading-relaxed">
-      {dict.whatWeDo.summary}
-    </p>
-  </div>
+          <p className="mt-6 text-base md:text-lg font-semibold leading-relaxed">
+            {dict.whatWeDo.summary}
+          </p>
+        </div>
 
-  {/* Fondo (derecha) */}
-  <div
-    className="min-h-[500px] md:min-h-0 bg-center bg-cover"
-    style={{ backgroundImage: "url('/datos.png')" }}
-  />
-</section>
+        {/* Fondo (derecha) */}
+        <div
+          className="min-h-[500px] md:min-h-0 bg-center bg-cover"
+          style={{ backgroundImage: "url('/datos.png')" }}
+        />
+      </section>
 
 
 
 
       {/* PROGRAMAS */}
       <section
-        className="py-12 bg-cover bg-center"
+        className="py-4 md:py-6 bg-cover bg-center"
         style={{ backgroundImage: "url('/back2.png')" }}
       >
         <div className="container-responsive text-white text-center">
-          <h2 className="text-6xl md:text-6xl font-bold">{dict.programsTitle}</h2>
+          <h2 className="text-5xl md:text-5xl font-bold mb-4">{dict.programsTitle}</h2>
 
           {/* Carrusel con flechas */}
           <ProgramsCarousel items={featuredItems} />
 
-          <div className="mt-6">
+          <div className="mt-4">
             <Link href={`/${safeLang}/programs`} className="underline">
               Ver todos / See all →
             </Link>
@@ -136,7 +136,7 @@ export default async function Home(
         </div>
       </section>
 
-      {/* ✅ HISTORIAS (carrusel automático 2 en 2) */}
+      {/* HISTORIAS */}
       <section
         className="py-8 bg-cover bg-center"
         style={{ backgroundImage: "url('/back11.png')" }}
@@ -149,52 +149,51 @@ export default async function Home(
       </section>
 
 
+      {/* DONAR */}
+      <section
+        className="relative py-12 md:py-16 bg-cover bg-center"
+        style={{ backgroundImage: "url('/back1.png')" }}
+      >
+        <div className="container-responsive grid md:grid-cols-[420px,1fr] items-center gap-10">
+          {/* Imagen del niño (cuadrada) */}
+          <div className="flex justify-center md:justify-start">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 ">
+              <Image
+                src="/donateimg.png"
+                alt="Niño sonriendo con material de arte"
+                fill
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+          </div>
 
-      {/* DONAR (estilo hero compacto con imagen cuadrada) */}
-<section
-  className="relative py-12 md:py-16 bg-cover bg-center"
-  style={{ backgroundImage: "url('/back1.png')" }}
->
-  <div className="container-responsive grid md:grid-cols-[420px,1fr] items-center gap-10">
-    {/* Imagen del niño (cuadrada) */}
-    <div className="flex justify-center md:justify-start">
-      <div className="relative w-64 h-64 md:w-80 md:h-80 ">
-        <Image
-          src="/donateimg.png"
-          alt="Niño sonriendo con material de arte"
-          fill
-          className="object-cover"
-          priority={false}
-        />
-      </div>
+          {/* Texto y botones */}
+          <div className="text-center md:text-left">
+            <h3 className="text-3xl md:text-5xl font-black tracking-tight text-amBlack uppercase">
+              {safeLang === "es" ? "¡HAZ UNA DONACIÓN!" : "Make a Donation!"}
+            </h3>
+
+            <p className="mt-3 text-lg md:text-2xl text-amBlack/70 max-w-2xl mx-auto md:mx-0">
+              {dict.donateBlock.body}
+            </p>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+              <Link href={`/${safeLang}/donate`}>
+                <Button className="px-6 py-2 text-base">{dict.hero.cta}</Button>
+              </Link>
+
+              <Link
+                href="https://paypal.me/"
+                target="_blank"
+                className="btn btn-outline px-6 py-2 text-base"
+              >
+                PayPal
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-
-    {/* Texto y botones */}
-    <div className="text-center md:text-left">
-      <h3 className="text-3xl md:text-5xl font-black tracking-tight text-amBlack uppercase">
-        {safeLang === "es" ? "¡HAZ UNA DONACIÓN!" : "Make a Donation!"}
-      </h3>
-
-      <p className="mt-3 text-lg md:text-2xl text-amBlack/70 max-w-2xl mx-auto md:mx-0">
-        {dict.donateBlock.body}
-      </p>
-
-      <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-        <Link href={`/${safeLang}/donate`}>
-          <Button className="px-6 py-2 text-base">{dict.hero.cta}</Button>
-        </Link>
-
-        <Link
-          href="https://paypal.me/"
-          target="_blank"
-          className="btn btn-outline px-6 py-2 text-base"
-        >
-          PayPal
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
- </div>
   );
 }

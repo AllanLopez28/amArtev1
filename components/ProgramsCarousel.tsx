@@ -23,7 +23,7 @@ export default function ProgramsCarousel({ items }: { items: Program[] }) {
   };
 
   return (
-    <div className="relative mt-6">
+    <div className="relative mt-2 mb-2">
       {/* Flecha Izquierda */}
       <button
         type="button"
