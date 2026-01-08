@@ -80,8 +80,8 @@ export default async function About(
                 />
               </div>
 
-              {/* ✅ Nombre en líneas (soporta \n) */}
-              <h3 className="mt-2 text-2xl font-semibold text-amWhite leading-tight">
+              {/* Nombre en líneas (soporta \n) */}
+              <h3 className="-mt-1 text-2xl font-semibold text-amWhite leading-tight">
                 {member.name.split("\n").map((line, idx) => (
                   <span key={idx} className="block">
                     {line}
@@ -89,10 +89,14 @@ export default async function About(
                 ))}
               </h3>
 
-              {/* ✅ Rol más cerca */}
+              {/* Rol */}
               <p className="mt-0.5 text-lg text-amWhite/80">
                 {member.role}
               </p>
+
+
+
+
             </div>
           ))}
         </div>
