@@ -57,8 +57,8 @@ export default async function LangLayout(
           <div>
             <h4 className="font-semibold mb-3 text-white">{dict.nav.contact}</h4>
             <p className="text-sm text-neutral-300">
-              <a href="mailto:amarteproject@gmail.com" className="hover:text-pink-400 transition">
-                amarteproject@gmail.com
+              <a href="mailto:projectamarte@gmail.com" className="hover:text-pink-400 transition">
+                projectamarte@gmail.com
               </a>
             </p>
 
