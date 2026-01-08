@@ -108,10 +108,19 @@ export default async function Home(
         </div>
 
         {/* Fondo (derecha) */}
-        <div
-          className="min-h-[500px] md:min-h-0 bg-center bg-cover"
-          style={{ backgroundImage: "url('/datos.png')" }}
-        />
+<div
+  className="
+    w-full
+    min-h-[420px]
+    md:min-h-[500px]
+    bg-[#57C3F1]   /* celeste de relleno */
+    bg-center
+    bg-no-repeat
+    bg-contain
+  "
+  style={{ backgroundImage: "url('/datos.png')" }}
+/>
+
       </section>
 
 
