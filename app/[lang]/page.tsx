@@ -22,14 +22,13 @@ export default async function Home(
   const safeLang: Lang = (lang === "en" || lang === "es") ? lang : "es";
   const dict = t(safeLang);
 
-  // IDs de los programas que quieres en portada
-  const featuredPrograms = ["art", "workshops", "scholarships"];
+  // IDs de los programas que aparecen en portada
+  const featuredPrograms = ["art", "workshops", "scholarships", "wellbeing"];
   const featuredItems = dict.programs.filter((p: any) =>
     featuredPrograms.includes(p.id)
   );
 
-  // ✅ CONSTRUIR stories desde dict.histories (corrige el nombre y el tipo)
-  // asegurarse de que `img` siempre esté presente para cumplir con ProgramItem
+
   const stories: Story[] = (dict.histories || []).map(h => ({
     id: h.id,
     title: h.title,

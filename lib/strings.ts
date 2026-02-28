@@ -48,28 +48,21 @@ export const dict = {
     programs: [
       {
         id: "art",
-        title: "Materiales de arte",
+        title: "Art Supply Drives & Giveaways",
         desc: "Kits con colores, cuadernos y pinceles.",
         imgAlt: "Niños con kits de arte",
         img: "/p3.png",
       },
       {
         id: "scholarships",
-        title: "Becas y premios",
+        title: "Scholarship & Mentorship",
         desc: "Apoyo económico para continuar estudios.",
         imgAlt: "Niños recibiendo becas",
         img: "/p2.png",
       },
       {
-        id: "workshops",
-        title: "Clases y talleres",
-        desc: "Arte, música, escritura y deportes.",
-        imgAlt: "Taller de arte",
-        img: "/p1.png",
-      },
-      {
         id: "wellbeing",
-        title: "Bienestar emocional",
+        title: "Community Engagement",
         desc: "Actividades para autoestima y resiliencia.",
         imgAlt: "Actividades de bienestar",
         img: "/p2.png",
@@ -210,28 +203,21 @@ export const dict = {
     programs: [
       {
         id: "art",
-        title: "Art materials",
+        title: "Art Supply Drives & Giveaways",
         desc: "Kits with crayons, notebooks and brushes.",
         imgAlt: "Kids with art kits",
         img: "/p2.png",
       },
       {
         id: "scholarships",
-        title: "Scholarships & awards",
+        title: "Scholarship & Mentorship",
         desc: "Financial support to stay in school.",
         imgAlt: "Children receiving scholarships",
         img: "/p2.png",
       },
       {
-        id: "workshops",
-        title: "Classes & workshops",
-        desc: "Art, music, writing and sports.",
-        imgAlt: "Art workshop",
-        img: "/p2.png",
-      },
-      {
         id: "wellbeing",
-        title: "Emotional wellbeing",
+        title: "Community Engagement",
         desc: "Activities to boost self-esteem and resilience.",
         imgAlt: "Wellbeing activities",
         img: "/p2.png",

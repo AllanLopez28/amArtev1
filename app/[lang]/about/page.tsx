@@ -31,8 +31,8 @@ export default async function About(
     },
     {
       src: "/karla.png",
-      name: "Karla Umanzor",
-      role: "Director",
+      name: "Karla \nUmanzor",
+      role: "Director of Programs",
     },
   ];
 
