@@ -13,7 +13,7 @@ export const dict = {
       faq: "FAQ",
     },
     hero: {
-      title: "Where the Love\nand Art\nCome Together",
+      title: "Where Love\nand Art\nCome Together",
       subtitle: "",
       cta: "¡DONA!",
     },
@@ -168,7 +168,7 @@ export const dict = {
       faq: "FAQ",
     },
     hero: {
-      title: "Where the Love\nand Art\nCome Together",
+      title: "Donde el amor \ny el arte\nSe unen",
       subtitle:
         "",
       cta: "Donate now",

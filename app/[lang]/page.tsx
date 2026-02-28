@@ -41,7 +41,7 @@ export default async function Home(
       {/* HERO */}
       <section className="relative">
         <Image
-          src="/banner.png"
+          src="/bannerr3.jpg"
           alt="Niños pintando"
           width={1920}
           height={1080}
@@ -57,31 +57,7 @@ export default async function Home(
             {dict.hero.subtitle}
           </p>
         </div>
-        <div className="absolute bottom-6 left-6">
-          <div className="backdrop-blur-md bg-white/60 shadow-soft rounded-xl px-4 md:px-6 py-3 md:py-4 inline-block">
-            <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-2 md:gap-4">
-              <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-extrabold text-amBlack">120</span>
-                <span className="text-xs md:text-sm opacity-80">{dict.quickImpact.kits}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-extrabold text-amblack">90</span>
-                <span className="text-xs md:text-sm opacity-80">{dict.quickImpact.talleres}</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl md:text-3xl font-extrabold text-amblack">5</span>
-                <span className="text-xs md:text-sm opacity-80">{dict.quickImpact.fondos}</span>
-              </div>
-              <div className="flex md:justify-end">
-                <Link href={`/${safeLang}/donate`} className="w-full md:w-auto">
-                  <Button className="w-full text-sm md:text-base">
-                    {dict.hero.cta}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </section>
 
       {/* ¿Qué hacemos? */}
@@ -108,16 +84,7 @@ export default async function Home(
 
         {/* Fondo (derecha) */}
 <div
-  className="
-    w-full
-    min-h-[420px]
-    md:min-h-[500px]
-    bg-[#57C3F1]   /* celeste de relleno */
-    bg-center
-    bg-no-repeat
-    bg-contain
-  "
-  style={{ backgroundImage: "url('/datos.png')" }}
+
 />
 
       </section>
