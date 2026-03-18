@@ -53,7 +53,7 @@ export default function ProgramsCarousel({ items }: { items: Program[] }) {
               />
             </div>
             <h3 className="mt-3 md:text-2xl font-semibold">{p.title}</h3>
-            <p className="text-sm opacity-80">{p.desc}</p>
+            
           </div>
 
         ))}

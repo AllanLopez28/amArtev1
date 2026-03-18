@@ -51,7 +51,7 @@ export const dict = {
         title: "Art Supply Drives & Giveaways",
         desc: "Kits con colores, cuadernos y pinceles.",
         imgAlt: "Niños con kits de arte",
-        img: "/p3.png",
+        img: "/p1.png",
       },
       {
         id: "scholarships",
@@ -65,7 +65,7 @@ export const dict = {
         title: "Community Engagement",
         desc: "Actividades para autoestima y resiliencia.",
         imgAlt: "Actividades de bienestar",
-        img: "/p2.png",
+        img: "/p3.png",
       },
     ],
 
@@ -73,41 +73,40 @@ export const dict = {
     histories: [
       {
         id: "beca",
-        title: "María – Beca para continuar sus estudios",
-        desc: "María soñaba con ser maestra, pero su familia no podía cubrir los gastos de su educación. Gracias a una beca de Amarte, pudo continuar sus estudios y hoy cursa su tercer año de docencia. 'Este apoyo me devolvió la esperanza', nos cuenta con una sonrisa.",
+        title: "AMARTE genera entornos de confianza ",
+        desc: "Permiten a cada niño y niña expresar sus emociones y pensamientos con libertad",
         img: "/s1.JPG",
       },
       {
         id: "taller",
-        title: "Carlos – Descubrió su talento en el arte",
-        desc: "Carlos, de 10 años, participó en uno de nuestros talleres de arte en su comunidad. Allí descubrió su pasión por la pintura y aprendió a expresar sus emociones a través del color. 'Nunca había tenido mis propios pinceles. Ahora pinto todos los días', dice orgulloso.",
+        title: " Talento en el arte",
+        desc: "Nuestros niños encuentran en la pintura un lenguaje para expresar sus emociones y pensamientos más profundos. El Salvador",
         img: "/s2.JPG",
       },
       {
         id: "apoyo",
-        title: "Ana – No dejó la escuela gracias al acompañamiento",
-        desc: "Ana estaba a punto de abandonar sus clases por falta de recursos. Nuestro programa de continuidad educativa le brindó materiales y apoyo emocional. Hoy sigue estudiando y quiere ser enfermera para ayudar a otros como la ayudaron a ella.",
+        title: "Escuela Cantón El Triunfo",
+        desc: "Gracias al valioso respaldo de AMARTE, todas las aulas de la Escuela Cantón El Triunfo han sido equipadas con espacios creativos dedicados al arte.",
         img: "/s5.JPG",
       },
       {
         id: "musica",
-        title: "El coro de Santa Ana – La música que une corazones",
-        desc: "Niños y niñas del coro de Santa Ana ensayan cada semana con entusiasmo. La música ha fortalecido su disciplina, confianza y trabajo en equipo. 'Aquí aprendí que todos tenemos una voz que vale', dice Sofía, una de las integrantes más jóvenes.",
+        title: "Jornada educativa",
+        desc: "Nix y Morena Hernández desarrollan una jornada educativa, enfocada en potenciar el bienestar emocional y autoestima de los ninos. El Salvador",
         img: "/s4.jpg",
       },
       {
         id: "comunidad",
-        title: "Rosa – Unidos por su comunidad",
-        desc: "Rosa vive en una zona rural donde los niños caminaban largos trayectos para llegar a la escuela. Con el apoyo de Amarte, organizaron jornadas comunitarias para mejorar el acceso y crear un espacio seguro para estudiar. 'No solo ayudaron a mis hijos, ayudaron a todo el caserío', comparte emocionada.",
+        title: "El apoyo de AMARTE abraza a los niños y también a quienes los rodean.",
+        desc: "",
         img: "/s3.JPG",
       },
       {
         id: "voluntario",
-        title: "Diego – De beneficiario a voluntario",
-        desc: "Diego conoció Amarte cuando era estudiante y recibió un kit escolar que lo motivó a continuar. Años después, se unió como voluntario para entregar materiales a otros niños. 'Ahora me toca devolver lo que una vez recibí', dice mientras acomoda cajas llenas de colores y sonrisas.",
+        title: "A veces, lo que sentimos es difícil de expresar con palabras",
+        desc: "Sin embargo, encontramos en la pintura una forma de liberar nuestro mundo interior. El Salvador",
         img: "/escuela1.png",
       },
-
     ],
 
     donateBlock: {
@@ -126,14 +125,17 @@ export const dict = {
     whatWeDoTitle: "¿Qué hacemos?",
     whatWeDo: {
       bullets: [
-        "Entrega de kits escolares",
-        "Programas educativos y artísticos que fomentan la creatividad, el pensamiento crítico y el amor por el aprendizaje.",
-        "Actividades recreativas y culturales",
-        "Becas de estudio para dar continuidad al proceso educativo de quienes más lo necesitan.",
+        "Talleres de arte y autoestima para niños y sus familias.",
+        "Becas para garantizar la continuidad de la educación de quienes más lo necesitan.",
+        "Actividades recreativas y culturales que integran a los ninos, sus familias y su comunidad. ",
+        "Donaciones estratégicas de suministros básicos para mejorar el entorno de los niños.",
       ],
       summary:
         "Cada acción que realizamos busca abrir oportunidades, sembrar sueños y construir un futuro lleno de posibilidades.",
       statsAlt: "Cifras de impacto de AMARTE",
+      missionLabel: "Nuestra Misión",
+      mission:
+        "La misión de AMARTE es equipar y elevar a los niños de bajos ingresos a través del poder transformador del amor y el arte. Utilizamos la expresión creativa como una herramienta para la educación, el desarrollo emocional y el autodescubrimiento, ayudando a los niños a desarrollar habilidades esenciales para la vida, como la comunicación, el pensamiento crítico y la resiliencia. Al fomentar relaciones sólidas entre niños, mentores y familias, creamos entornos de apoyo donde cada niño puede desarrollarse y alcanzar su máximo potencial.",
     },
     faq: {
       title: "Preguntas frecuentes",
@@ -168,10 +170,8 @@ export const dict = {
       faq: "FAQ",
     },
     hero: {
-      
       title: "Where Love\nand Art\nCome Together",
-      subtitle:
-        "",
+      subtitle: "",
       cta: "Donate now",
     },
     quickImpact: {
@@ -229,38 +229,38 @@ export const dict = {
     histories: [
       {
         id: "beca",
-        title: "María – Scholarship to continue her studies",
-        desc: "María dreamed of becoming a teacher, but her family couldn’t afford the cost of her education. Thanks to an Amarte scholarship, she was able to continue her studies and is now in her third year of teaching school. 'This support gave me hope again,' she shares with a smile.",
+        title: "AMARTE creates environments of trust",
+        desc: "empower every child to express their emotions and thoughts with freedom.",
         img: "/s1.JPG",
       },
       {
         id: "taller",
-        title: "Carlos – Discovered his talent through art",
-        desc: "Carlos, age 10, took part in one of our community art workshops. There, he discovered his passion for painting and learned to express his emotions through color. 'I had never owned my own brushes before. Now I paint every day,' he says proudly.",
+        title: "Talent through art",
+        desc: "Our children find in painting a language to express their deepest emotions and thoughts. El Salvador",
         img: "/s2.JPG",
       },
       {
         id: "apoyo",
-        title: "Ana – Stayed in school thanks to support",
-        desc: "Ana was about to leave school due to financial difficulties. Our educational continuity program provided her with supplies and emotional support. Today, she continues studying and dreams of becoming a nurse to help others just as she was helped.",
+        title: "Cantón El Triunfo School (El Salvador)",
+        desc: "Every classroom at Cantón El Triunfo School (El Salvador) now has its own art station, thanks to the generous support of AMARTE",
         img: "/s5.JPG",
       },
       {
         id: "musica",
-        title: "The Santa Ana Choir – Music that unites hearts",
-        desc: "The boys and girls of the Santa Ana Choir rehearse every week with enthusiasm. Music has strengthened their discipline, confidence, and teamwork. 'Here I learned that every voice matters,' says Sofía, one of the youngest members.",
+        title: "Educational workshop",
+        desc: "Nix and Morena Hernández are leading an educational workshop focused on strengthening the emotional well-being and self-esteem of children. El Salvador.",
         img: "/s4.jpg",
       },
       {
         id: "comunidad",
-        title: "Rosa – United for her community",
-        desc: "Rosa lives in a rural area where children used to walk long distances to get to school. With Amarte’s support, the community organized workdays to improve access and create a safe place to learn. 'They didn’t just help my children—they helped the whole village,' she says with emotion.",
+        title: "",
+        desc: "The support from AMARTE embraces the children and everyone who surrounds them.",
         img: "/s3.JPG",
       },
       {
         id: "voluntario",
-        title: "Diego – From beneficiary to volunteer",
-        desc: "Diego first met Amarte as a student when he received a school kit that encouraged him to keep studying. Years later, he joined as a volunteer to deliver materials to other children. 'Now it’s my turn to give back what I once received,' he says while arranging boxes full of colors and smiles.",
+        title: "Sometimes, what we feel is difficult to express with words",
+        desc: "however, we find in painting a way to set our inner world free. El Salvador",
         img: "/escuela1.png",
       },
     ],
@@ -281,19 +281,22 @@ export const dict = {
     whatWeDoTitle: "What we do",
     whatWeDo: {
       bullets: [
-        "Delivery of school kits",
-        "Educational and artistic programs that foster creativity, critical thinking, and a love for learning.",
-        "Recreational and cultural activities",
-        "Scholarships to ensure continuity of education for those who need it most.",
+        "Art and self-esteem workshops for children and their families.",
+        "Scholarships to ensure the continuity of education for those who need it most.",
+        "Recreational and cultural activities that integrate children, their families, and their community.",
+        "Strategic donations of basic supplies to improve the children's environment.",
       ],
       summary:
         "Each action we take seeks to open opportunities, sow dreams, and build a future full of possibilities.",
       statsAlt: "AMARTE impact figures",
+      missionLabel: "Our Mission",
+      mission:
+        "AMARTE's mission is to equip and uplift low-income children through the transformative power of love and art. We use creative expression as a tool for education, emotional development, and self-discovery, helping children develop essential life skills such as communication, critical thinking, and resilience. By fostering strong relationships between children, mentors, and families, we create supportive environments where every child can grow and reach their full potential.",
     },
     faq: {
       title: "Frequently Asked Questions",
       intro:
-        "Here you’ll find answers to common questions. We will expand this section.",
+        "Here you'll find answers to common questions. We will expand this section.",
       items: [
         {
           q: "How can I make a donation?",
@@ -301,11 +304,11 @@ export const dict = {
         },
         {
           q: "Can I volunteer?",
-          a: "Yes. In the Get Involved section you’ll find a volunteer application form.",
+          a: "Yes. In the Get Involved section you'll find a volunteer application form.",
         },
         {
           q: "Will I receive a donation receipt?",
-          a: "Yes, once the payment is completed you’ll receive a receipt via email.",
+          a: "Yes, once the payment is completed you'll receive a receipt via email.",
         },
       ],
     },

@@ -28,13 +28,15 @@ export default async function Home(
     featuredPrograms.includes(p.id)
   );
 
-
   const stories: Story[] = (dict.histories || []).map(h => ({
     id: h.id,
     title: h.title,
     desc: h.desc || "",
     img: h.img || "/story-placeholder.png",
   }));
+
+  // Íconos por índice de bullet
+  const bulletIcons = ["1", "3", "2", "4"];
 
   return (
     <div>
@@ -57,7 +59,6 @@ export default async function Home(
             {dict.hero.subtitle}
           </p>
         </div>
-        
       </section>
 
       {/* ¿Qué hacemos? */}
@@ -70,9 +71,15 @@ export default async function Home(
 
           <ul className="mt-6 space-y-5 text-base md:text-lg">
             {dict.whatWeDo.bullets.map((line: string, i: number) => (
-              <li key={i} className="pl-6 relative leading-relaxed">
-                <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-current" />
-                {line}
+              <li key={i} className="flex items-center gap-4 leading-relaxed">
+                <Image
+                  src={`/${bulletIcons[i]}.png`}
+                  alt=""
+                  width={90}
+                  height={90}
+                  className="shrink-0 object-contain"
+                />
+                <span>{line}</span>
               </li>
             ))}
           </ul>
@@ -82,15 +89,28 @@ export default async function Home(
           </p>
         </div>
 
-        {/* Fondo (derecha) */}
-<div
+        {/* Misión (derecha) */}
+        <div className="flex items-center justify-center bg-amBlue px-6 py-10">
+          <div className="w-full">
+            {/* Etiqueta */}
+            <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
+              {dict.whatWeDo.missionLabel}
+            </span>
 
-/>
+            {/* Texto de misión */}
+            <p className="text-white text-base md:text-lg leading-relaxed font-light">
+              {dict.whatWeDo.mission}
+            </p>
 
+            {/* Separador decorativo */}
+            <div className="mt-6 flex items-center gap-3">
+              <div className="h-1 w-12 rounded-full bg-amPink" />
+              <div className="h-1 w-6 rounded-full bg-white/40" />
+              <div className="h-1 w-3 rounded-full bg-white/20" />
+            </div>
+          </div>
+        </div>
       </section>
-
-
-
 
       {/* PROGRAMAS */}
       <section
@@ -116,13 +136,10 @@ export default async function Home(
         className="py-8 bg-cover bg-center"
         style={{ backgroundImage: "url('/back11.png')" }}
       >
-        {/* Overlay opcional para legibilidad del texto */}
         <div className="rounded-2xl p-6 md:p-10">
-
           <StoriesCarousel items={stories} intervalMs={5000} />
         </div>
       </section>
-
 
       {/* DONAR */}
       <section
@@ -132,7 +149,7 @@ export default async function Home(
         <div className="container-responsive grid md:grid-cols-[420px,1fr] items-center gap-10">
           {/* Imagen del niño (cuadrada) */}
           <div className="flex justify-center md:justify-start">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 ">
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
               <Image
                 src="/donateimg.png"
                 alt="Niño sonriendo con material de arte"
