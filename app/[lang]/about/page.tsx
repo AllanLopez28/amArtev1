@@ -49,10 +49,21 @@ export default async function About(
       {/* Contenido */}
       <div className="container-responsive py-16 relative">
         <h1 className="text-5xl font-bold">{dict.teamTitle}</h1>
-        <p className="mt-3 max-w-2xl opacity-80">
-          Misión, visión e historia. Texto de ejemplo acorde a la fundación,
-          resaltando transparencia, arte y educación.
-        </p>
+
+        {/* Misión */}
+        <div className="mt-4 max-w-3xl">
+          <span className="inline-block bg-amBlue/10 text-amBlue text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3">
+            {dict.whatWeDo.missionLabel}
+          </span>
+          <p className="text-neutral-700 text-base md:text-lg leading-relaxed">
+            {dict.whatWeDo.mission}
+          </p>
+          <div className="mt-4 flex items-center gap-3">
+            <div className="h-1 w-12 rounded-full bg-amPink" />
+            <div className="h-1 w-6 rounded-full bg-amBlue/40" />
+            <div className="h-1 w-3 rounded-full bg-amBlue/20" />
+          </div>
+        </div>
 
         {/* Grilla de imágenes */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mt-12 text-center">
@@ -93,10 +104,6 @@ export default async function About(
               <p className="mt-0.5 text-lg text-amWhite/80">
                 {member.role}
               </p>
-
-
-
-
             </div>
           ))}
         </div>

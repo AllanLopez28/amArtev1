@@ -207,7 +207,7 @@ export const dict = {
         title: "Art Supply Drives & Giveaways",
         desc: "Kits with crayons, notebooks and brushes.",
         imgAlt: "Kids with art kits",
-        img: "/p2.png",
+        img: "/p1.png",
       },
       {
         id: "scholarships",
@@ -221,7 +221,7 @@ export const dict = {
         title: "Community Engagement",
         desc: "Activities to boost self-esteem and resilience.",
         imgAlt: "Wellbeing activities",
-        img: "/p2.png",
+        img: "/p3.png",
       },
     ],
 
