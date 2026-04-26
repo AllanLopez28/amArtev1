@@ -34,9 +34,10 @@ export default async function LangLayout(
             />
             <p className="mt-3 text-sm leading-relaxed max-w-md text-neutral-300">
               AMARTE International Inc. is a 501(c)(3) not-for-profit organization,
-              incorporated in the State of New York on May 23, 2025. Our purpose is
+              incorporated in the State of New York on May 15, 2025. Our purpose is
               to promote the rights and well-being of underserved children and their
               families, impacting and equipping our communities through art and love.
+              211 PO BOX, Mineola, NY 11501.
             </p>
           </div>
 

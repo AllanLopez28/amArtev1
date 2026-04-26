@@ -7,48 +7,55 @@ export default async function About(
   const { lang } = await params;
   const dict = t(lang || "es");
 
-  // Info del equipo (imagen, nombre, rol)
   const team = [
     {
       src: "/virginia.png",
       name: "Virginia Barrow-Coreas",
       role: "President",
+      desc: lang === "es"
+        ? "Virginia lidera la fundación con una visión clara de impacto social, guiando cada iniciativa con pasión y compromiso hacia los niños y familias de El Salvador."
+        : "Virginia leads the foundation with a clear vision of social impact, guiding every initiative with passion and commitment toward children and families in El Salvador.",
     },
     {
       src: "/benjamin.png",
       name: "Benjamin Coreas",
       role: "Vice President",
+      desc: lang === "es"
+        ? "Benjamin apoya la dirección estratégica de AMARTE, coordinando esfuerzos entre los distintos programas y asegurando que cada acción esté alineada con la misión de la fundación."
+        : "Benjamin supports AMARTE's strategic direction, coordinating efforts across programs and ensuring every action aligns with the foundation's mission.",
     },
     {
       src: "/karen.png",
-      name: "Karen \nDiaz",
+      name: "Karen Diaz",
       role: "Treasurer",
+      desc: lang === "es"
+        ? "Karen gestiona los recursos financieros de la fundación con transparencia y responsabilidad, garantizando que cada donación llegue donde más se necesita."
+        : "Karen manages the foundation's financial resources with transparency and accountability, ensuring every donation reaches where it is needed most.",
     },
     {
       src: "/gaby.png",
       name: "Gabriela Barrera",
       role: "Secretary",
+      desc: lang === "es"
+        ? "Gabriela mantiene la organización interna de AMARTE, coordinando comunicaciones y documentación para que cada programa funcione de manera eficiente."
+        : "Gabriela maintains AMARTE's internal organization, coordinating communications and documentation so every program runs efficiently.",
     },
     {
       src: "/karla.png",
-      name: "Karla \nUmanzor",
+      name: "Karla Umanzor",
       role: "Director of Programs",
+      desc: lang === "es"
+        ? "Karla diseña y supervisa los programas educativos y artísticos de AMARTE, asegurando que cada actividad genere un impacto real y duradero en las comunidades."
+        : "Karla designs and oversees AMARTE's educational and artistic programs, ensuring every activity creates a real and lasting impact in communities.",
     },
   ];
 
   return (
-    <section
-      className="
-        relative
-        bg-[url('/back2.png')] bg-cover bg-center bg-no-repeat
-      "
-    >
-      {/* Overlay opcional para legibilidad */}
-      <div className="absolute inset-0 bg-white/70 -z-10"></div>
+    <section className="bg-white">
+      <div className="container-responsive py-16">
 
-      {/* Contenido */}
-      <div className="container-responsive py-16 relative">
-        <h1 className="text-5xl font-bold">{dict.teamTitle}</h1>
+        {/* Título */}
+        <h1 className="text-5xl font-bold text-neutral-800">{dict.teamTitle}</h1>
 
         {/* Misión */}
         <div className="mt-4 max-w-3xl">
@@ -65,48 +72,40 @@ export default async function About(
           </div>
         </div>
 
-        {/* Grilla de imágenes */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mt-12 text-center">
+        {/* Lista de miembros */}
+        <div className="mt-14 flex flex-col gap-8">
           {team.map((member, i) => (
-            <div key={i} className="flex flex-col items-center">
-              {/* Contenedor responsive */}
-              <div
-                className="
-                  relative
-                  w-40 h-40
-                  sm:w-48 sm:h-48
-                  md:w-56 md:h-56
-                  lg:w-64 lg:h-64
-                "
-              >
+            <div
+              key={i}
+              className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-neutral-50 rounded-2xl p-3 shadow-soft"
+            >
+              {/* Foto */}
+              <div className="relative shrink-0 w-48 h-48 md:w-60 md:h-60">
                 <Image
                   src={member.src}
-                  alt={member.name.replace("\n", " ")}
+                  alt={member.name}
                   fill
-                  className="object-contain rounded-2xl"
-                  sizes="(max-width: 640px) 160px,
-                         (max-width: 768px) 192px,
-                         (max-width: 1024px) 224px,
-                         256px"
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 144px, 176px"
                 />
               </div>
 
-              {/* Nombre en líneas (soporta \n) */}
-              <h3 className="-mt-1 text-2xl font-semibold text-amWhite leading-tight">
-                {member.name.split("\n").map((line, idx) => (
-                  <span key={idx} className="block">
-                    {line}
-                  </span>
-                ))}
-              </h3>
-
-              {/* Rol */}
-              <p className="mt-0.5 text-lg text-amWhite/80">
-                {member.role}
-              </p>
+              {/* Texto */}
+              <div className="flex flex-col justify-center text-center sm:text-left">
+                <h3 className="text-xl md:text-2xl font-bold text-neutral-800">
+                  {member.name}
+                </h3>
+                <span className="mt-1 inline-block text-sm font-semibold tracking-wide uppercase text-amBlue">
+                  {member.role}
+                </span>
+                <p className="mt-3 text-neutral-600 text-sm md:text-base leading-relaxed max-w-xl">
+                  {member.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

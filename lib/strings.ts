@@ -133,9 +133,9 @@ export const dict = {
       summary:
         "Cada acción que realizamos busca abrir oportunidades, sembrar sueños y construir un futuro lleno de posibilidades.",
       statsAlt: "Cifras de impacto de AMARTE",
-      missionLabel: "Nuestra Misión",
+      missionLabel: "Nuestra Visión",
       mission:
-        "La misión de AMARTE es equipar y elevar a los niños de bajos ingresos a través del poder transformador del amor y el arte. Utilizamos la expresión creativa como una herramienta para la educación, el desarrollo emocional y el autodescubrimiento, ayudando a los niños a desarrollar habilidades esenciales para la vida, como la comunicación, el pensamiento crítico y la resiliencia. Al fomentar relaciones sólidas entre niños, mentores y familias, creamos entornos de apoyo donde cada niño puede desarrollarse y alcanzar su máximo potencial.",
+        "Imaginamos un mundo donde cada niño, independientemente de su situación socioeconómica, tenga la oportunidad de explorar su creatividad, sentirse apoyado y desarrollar las habilidades que necesita para alcanzar su potencial.",
     },
     faq: {
       title: "Preguntas frecuentes",
@@ -289,9 +289,9 @@ export const dict = {
       summary:
         "Each action we take seeks to open opportunities, sow dreams, and build a future full of possibilities.",
       statsAlt: "AMARTE impact figures",
-      missionLabel: "Our Mission",
+      missionLabel: "Our Vision",
       mission:
-        "AMARTE's mission is to equip and uplift low-income children through the transformative power of love and art. We use creative expression as a tool for education, emotional development, and self-discovery, helping children develop essential life skills such as communication, critical thinking, and resilience. By fostering strong relationships between children, mentors, and families, we create supportive environments where every child can grow and reach their full potential.",
+        "We envision a world where every child regardless of their socioeconomic background has the chance to explore their creativity, feel supported, and build the skills they need to reach their potential.",
     },
     faq: {
       title: "Frequently Asked Questions",
