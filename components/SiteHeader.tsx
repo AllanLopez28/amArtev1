@@ -48,9 +48,10 @@ export default function SiteHeader({
             <Image
               src="/logo-amarte.png"
               alt="AMARTE"
-              width={110}
-              height={36}
+              width={160}
+              height={52}
               priority
+              className="scale-125 origin-left"
             />
           </Link>
 
@@ -115,8 +116,9 @@ export default function SiteHeader({
               <Image
                 src="/logo-amarte.png"
                 alt="AMARTE"
-                width={100}
-                height={32}
+                width={130}
+                height={42}
+                className="scale-125 origin-left"
               />
               <button
                 aria-label="Cerrar menú"

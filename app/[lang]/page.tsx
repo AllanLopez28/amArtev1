@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { t, type Lang } from "@/lib/strings";
 import StoriesCarousel from "@/components/StoriesCarousel";
 import ProgramsCarousel from "@/components/ProgramsCarousel";
+import MissionVisionCarousel from "@/components/MissionVisionCarousel";
 
 type Story = {
   id: string;
@@ -89,27 +90,13 @@ export default async function Home(
           </p>
         </div>
 
-        {/* Misión (derecha) */}
-        <div className="flex items-center justify-center bg-amBlue px-6 py-10">
-          <div className="w-full">
-            {/* Etiqueta */}
-            <span className="inline-block bg-white/20 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-5">
-              {dict.whatWeDo.missionLabel}
-            </span>
-
-            {/* Texto de misión */}
-            <p className="text-white text-base md:text-lg leading-relaxed font-light">
-              {dict.whatWeDo.mission}
-            </p>
-
-            {/* Separador decorativo */}
-            <div className="mt-6 flex items-center gap-3">
-              <div className="h-1 w-12 rounded-full bg-amPink" />
-              <div className="h-1 w-6 rounded-full bg-white/40" />
-              <div className="h-1 w-3 rounded-full bg-white/20" />
-            </div>
-          </div>
-        </div>
+        {/* Visión y Misión Carrusel (derecha) */}
+        <MissionVisionCarousel 
+          items={[
+            { label: dict.whatWeDo.missionLabel, text: dict.whatWeDo.mission },
+            { label: dict.whatWeDo.ourMissionLabel, text: dict.whatWeDo.ourMission }
+          ]} 
+        />
       </section>
 
       {/* PROGRAMAS */}

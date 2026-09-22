@@ -136,6 +136,9 @@ export const dict = {
       missionLabel: "Nuestra Visión",
       mission:
         "Imaginamos un mundo donde cada niño, independientemente de su situación socioeconómica, tenga la oportunidad de explorar su creatividad, sentirse apoyado y desarrollar las habilidades que necesita para alcanzar su potencial.",
+      ourMissionLabel: "Nuestra Misión",
+      ourMission:
+        "Inspirar y fortalecer a la niñez mediante el poder transformador del amor y el arte, brindándoles oportunidades gratuitas para su desarrollo creativo, emocional y educativo.",
     },
     faq: {
       title: "Preguntas frecuentes",
@@ -292,6 +295,9 @@ export const dict = {
       missionLabel: "Our Vision",
       mission:
         "We envision a world where every child regardless of their socioeconomic background has the chance to explore their creativity, feel supported, and build the skills they need to reach their potential.",
+      ourMissionLabel: "Our Mission",
+      ourMission:
+        "To inspire and empower children through the transformative power of love and art, providing free opportunities for creative, emotional, and educational growth.",
     },
     faq: {
       title: "Frequently Asked Questions",

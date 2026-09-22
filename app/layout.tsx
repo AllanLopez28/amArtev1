@@ -10,6 +10,9 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Amarte",
   description: "Fundación Amarte",
+  icons: {
+    icon: "/logo-amarte.png",
+  },
 };
 
 export default function RootLayout({
