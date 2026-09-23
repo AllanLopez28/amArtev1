@@ -40,7 +40,7 @@ export default async function ProgramsPage(
     },
     {
       id: "us-art-program",
-      img: "/art-us1.jpeg",
+      img: "/art-us1.png",
       imgAlt: lang === "es" ? "Programa de Arte en USA" : "Art Program in USA",
       title: "Art Program",
       desc: lang === "es"
@@ -50,7 +50,7 @@ export default async function ProgramsPage(
     },
     {
       id: "do-art-program",
-      img: "/art-rd1.jpeg",
+      img: "/art-rd1.png",
       imgAlt: lang === "es" ? "Programa de Arte en RD" : "Art Program in DR",
       title: "Art Program",
       desc: lang === "es"
